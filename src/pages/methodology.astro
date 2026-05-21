@@ -1,0 +1,17 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'Methodology | civilrightscalc.com';
+const description = 'How the § 1983 civil rights damages calculator works: compensatory damages, punitive damages, qualified immunity, and attorney fees.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Methodology &mdash; How We Estimate Civil Rights Damages</h1>
+  <p><em>Reviewed by Riley Chen (RC), Employment &amp; Civil Rights Practice Lead. Updated May 2026.</em></p>
+  <h2>Compensatory damages</h2>
+  <p>Based on published jury verdict data for &sect; 1983 cases by violation type and injury severity. The base injury estimate reflects median comparable verdicts; the violation type multiplier adjusts for the typical severity and nature of each constitutional right affected. Lost income is added separately based on months of lost employment or detention multiplied by monthly earnings.</p>
+  <h2>Punitive damages</h2>
+  <p>Available against individual officers only (not municipalities). The calculator estimates punitive at 1.2x compensatory for individual officer defendants, consistent with published &sect; 1983 verdict data. Actual punitive awards vary widely &mdash; some juries award nominal amounts; others award multiples of compensatory. The wide output range reflects this uncertainty.</p>
+  <h2>Range width</h2>
+  <p>The output uses a &plusmn;50% range rather than the &plusmn;30% used for other calculators. This reflects the unique unpredictability of &sect; 1983 cases: qualified immunity can reduce recovery to zero, while Monell claims against a deep-pocketed municipality can produce large verdicts. The true range is even wider in practice.</p>
+  <h2>Not included</h2>
+  <p>Nominal damages (available when no actual harm is shown but a constitutional right was violated &mdash; often $1), injunctive relief, and consent decree enforcement. Attorney fees are separately recoverable under 42 U.S.C. &sect; 1988.</p>
+</BaseLayout>
