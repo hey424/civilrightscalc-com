@@ -1,0 +1,22 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+const title = 'FAQ | civilrightscalc.com';
+const description = 'Frequently asked questions about civil rights claims under 42 U.S.C. § 1983, qualified immunity, Monell doctrine, and damages.';
+---
+<BaseLayout title={title} description={description}>
+  <h1>Frequently Asked Questions</h1>
+  <h2>What is 42 U.S.C. § 1983?</h2>
+  <p>A federal statute enacted after the Civil War that allows individuals to sue state and local government officials who deprive them of constitutional or federal statutory rights under color of law. It is the primary tool for civil rights litigation against government actors.</p>
+  <h2>Can I sue the federal government under § 1983?</h2>
+  <p>No. Section 1983 covers state and local government actors, not federal officials. Claims against federal officers typically proceed under <em>Bivens v. Six Unknown Named Agents</em> (1971), which has been significantly restricted by the Supreme Court in recent years.</p>
+  <h2>What is qualified immunity?</h2>
+  <p>A judicially created doctrine that shields government officials from damages unless they violated a &ldquo;clearly established&rdquo; statutory or constitutional right that a reasonable person would have known. Critics argue it effectively bars many meritorious civil rights claims. Some states have abolished or limited it by statute.</p>
+  <h2>Can I sue a police department?</h2>
+  <p>Yes, but only under the <em>Monell</em> doctrine &mdash; you must show the violation resulted from an official policy, widespread custom, or a failure to train amounting to deliberate indifference. You cannot simply sue the department because one of its officers violated your rights.</p>
+  <h2>Is there a statute of limitations?</h2>
+  <p>Section 1983 uses the personal injury statute of limitations of the state where the violation occurred &mdash; typically 2 to 3 years. The clock starts when you knew or should have known of the injury, subject to tolling rules for minors and people under legal disability.</p>
+  <h2>Are punitive damages available against cities?</h2>
+  <p>No. <em>City of Newport v. Fact Concerts, Inc.</em> (1981) held that municipalities are immune from punitive damages under &sect; 1983. Punitive damages are available only against individual officers who act with malice or reckless indifference.</p>
+  <h2>Do I get attorney fees if I win?</h2>
+  <p>Yes. The Civil Rights Attorney&rsquo;s Fees Awards Act (42 U.S.C. &sect; 1988) entitles the prevailing plaintiff to reasonable attorney fees from the defendant. This provision is critical &mdash; it makes it economically viable for attorneys to take small-damages civil rights cases.</p>
+</BaseLayout>
