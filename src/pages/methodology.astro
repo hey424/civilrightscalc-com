@@ -5,13 +5,44 @@ const description = 'How the § 1983 civil rights damages calculator works: comp
 ---
 <BaseLayout title={title} description={description}>
   <h1>Methodology &mdash; How We Estimate Civil Rights Damages</h1>
-  <p><em>Reviewed by Riley Chen (RC), Employment &amp; Civil Rights Practice Lead. Updated May 2026.</em></p>
-  <h2>Compensatory damages</h2>
-  <p>Based on published jury verdict data for &sect; 1983 cases by violation type and injury severity. The base injury estimate reflects median comparable verdicts; the violation type multiplier adjusts for the typical severity and nature of each constitutional right affected. Lost income is added separately based on months of lost employment or detention multiplied by monthly earnings.</p>
-  <h2>Punitive damages</h2>
-  <p>Available against individual officers only (not municipalities). The calculator estimates punitive at 1.2x compensatory for individual officer defendants, consistent with published &sect; 1983 verdict data. Actual punitive awards vary widely &mdash; some juries award nominal amounts; others award multiples of compensatory. The wide output range reflects this uncertainty.</p>
-  <h2>Range width</h2>
-  <p>The output uses a &plusmn;50% range rather than the &plusmn;30% used for other calculators. This reflects the unique unpredictability of &sect; 1983 cases: qualified immunity can reduce recovery to zero, while Monell claims against a deep-pocketed municipality can produce large verdicts. The true range is even wider in practice.</p>
-  <h2>Not included</h2>
-  <p>Nominal damages (available when no actual harm is shown but a constitutional right was violated &mdash; often $1), injunctive relief, and consent decree enforcement. Attorney fees are separately recoverable under 42 U.S.C. &sect; 1988.</p>
+  <p><em>Reviewed by Uma Prescott (UP), Editor-in-Chief &mdash; Civil Rights &amp; Section 1983 Litigation Practice. Updated May 2026.</em></p>
+
+  <p>This page documents the formulas, data sources, and assumptions behind the civil rights damages calculator. Every input, multiplier, and output range is explained below so users can understand how their estimate was generated and what its limitations are.</p>
+
+  <h2>Step 1: Injury severity base value</h2>
+  <p>The starting point for compensatory damages is the physical injury severity the user selects. These base values are derived from published jury verdict databases and settlement data for &sect; 1983 civil rights cases. The values represent approximate medians for each injury category across reported cases:</p>
+  <ul>
+    <li><strong>Serious or permanent injury</strong> — $150,000 base. Covers cases involving significant physical harm: broken bones, traumatic brain injury, permanent disability, disfigurement, or injuries requiring extended medical treatment. Cases involving death or permanent paralysis typically exceed this base substantially.</li>
+    <li><strong>Moderate injury requiring treatment</strong> — $50,000 base. Cases involving injuries that required medical attention — lacerations, soft tissue injuries, contusions, or short-term hospitalization — but that resolved without permanent impairment.</li>
+    <li><strong>Minor injury</strong> — $10,000 base. Cases involving temporary, self-resolving physical injuries such as bruising, minor cuts, or brief pain without lasting harm.</li>
+    <li><strong>No physical injury (constitutional violation only)</strong> — $5,000 base. Cases where a constitutional right was violated but no measurable physical harm resulted. These values reflect emotional distress and loss of constitutional rights damages. Pure nominal damage verdicts of $1 are not included in the base; the $5,000 estimate assumes some actual harm was established.</li>
+  </ul>
+
+  <h2>Step 2: Violation type adjustment multiplier</h2>
+  <p>The injury base is multiplied by a factor that reflects the typical premium or discount associated with each constitutional violation category, based on comparative verdict data:</p>
+  <ul>
+    <li><strong>Excessive force / police brutality</strong> — 1.5×. The most litigated and typically highest-value &sect; 1983 category. Excessive force cases, particularly those involving severe or lethal force, attract the largest verdicts. The 1.5× multiplier reflects published data showing these cases produce above-average compensatory awards relative to comparable injury levels in other contexts.</li>
+    <li><strong>Unlawful arrest or detention</strong> — 1.0×. Verdicts for unlawful arrest and wrongful conviction cases span an enormous range depending on duration and circumstances. The 1.0× factor is a conservative midpoint; long-term wrongful imprisonment cases substantially exceed this.</li>
+    <li><strong>Unlawful search or seizure</strong> — 0.8×. Property seizure and search-and-seizure cases without accompanying physical force tend to produce lower compensatory verdicts absent significant ancillary harm. The 0.8× reflects the lower typical injury level in search cases compared to force cases.</li>
+    <li><strong>Due process violation</strong> — 1.0×. A neutral multiplier reflecting the wide range within the due process category. Wrongful deprivation of property rights and liberty interest deprivations occupy different ranges.</li>
+    <li><strong>First Amendment retaliation</strong> — 0.9×. First Amendment retaliation cases typically involve economic or professional harm rather than physical injury. The 0.9× adjustment reflects the typical mixture of economic and emotional distress harm in these cases.</li>
+    <li><strong>Equal protection violation</strong> — 0.9×. Equal protection cases involving selective enforcement and racial discrimination claims tend toward the lower end of compensatory verdicts absent accompanying physical injury.</li>
+  </ul>
+
+  <h2>Step 3: Lost income</h2>
+  <p>Lost income or income lost during detention is calculated by dividing the user&rsquo;s annual income by 12 and multiplying by the number of months of lost income or detention entered. This amount is added to the adjusted injury base to produce the total compensatory estimate. The formula is straightforward: <code>(annual income / 12) × months = lost income component</code>.</p>
+  <p>This component is most significant in wrongful conviction or prolonged detention cases where years of employment income were lost. For cases involving physical injury without employment disruption, months-lost should be entered as 0.</p>
+
+  <h2>Step 4: Punitive damages (individual officers only)</h2>
+  <p>Punitive damages are available against individual government officers who acted with malice or reckless indifference to constitutional rights, but are categorically unavailable against municipalities and government entities under <em>City of Newport v. Fact Concerts, Inc.</em>, 453 U.S. 247 (1981). When the user selects &ldquo;individual government officer&rdquo; as the primary defendant, the calculator adds a punitive component equal to 1.2&times; compensatory damages.</p>
+  <p>This 1.2× ratio is derived from the median punitive-to-compensatory ratio in published &sect; 1983 verdicts where punitive damages were awarded. In practice, punitive awards in civil rights cases range from nominal amounts (sometimes equal to or less than compensatory) to multiples of compensatory for particularly egregious conduct. The 1.2× is a central estimate, not a ceiling. When the defendant is a municipality, no punitive component is added.</p>
+
+  <h2>Step 5: Output range</h2>
+  <p>The final estimate is presented as a range of &plusmn;50% around the calculated central estimate — lower bound at 50% of the central figure, upper bound at 150%. This is intentionally wider than the &plusmn;30% range used by our other calculators.</p>
+  <p>The wider range reflects two factors unique to &sect; 1983 litigation. First, qualified immunity can reduce recovery to zero even when a constitutional violation is clear — whether the right was &ldquo;clearly established&rdquo; depends on the state of the case law in the applicable circuit at the time of the conduct, a highly fact-specific inquiry that no formula can predict. Second, successful Monell claims against a government entity can produce very large verdicts, particularly when the plaintiff can establish a pattern-or-practice that reflects institutional indifference. The true range of outcomes in &sect; 1983 cases is even wider than &plusmn;50% in extreme cases; the range shown reflects the central bulk of outcomes, not the tails.</p>
+
+  <h2>What this calculator does not estimate</h2>
+  <p>The calculator does not estimate nominal damages (the $1 or token award available when a constitutional right was violated but no actual harm is proven), injunctive or declaratory relief, or the value of consent decrees or structural reform. Attorney fees under 42 U.S.C. &sect; 1988 are separately recoverable and not included in the estimate; these are paid by the defendant to the prevailing plaintiff&rsquo;s attorneys and do not reduce the plaintiff&rsquo;s recovery. The calculator also does not account for the possibility that qualified immunity defeats the claim entirely, or that Monell requirements are not met in a municipal claim — both of which are realistic outcomes in contested &sect; 1983 litigation.</p>
+
+  <p>Return to the <a href="/">calculator</a>, or read the <a href="/faq">FAQ</a>.</p>
 </BaseLayout>

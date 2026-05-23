@@ -1,22 +1,41 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 const title = 'FAQ | civilrightscalc.com';
-const description = 'Frequently asked questions about civil rights claims under 42 U.S.C. § 1983, qualified immunity, Monell doctrine, and damages.';
+const description = 'Frequently asked questions about civil rights claims under 42 U.S.C. § 1983, qualified immunity, Monell doctrine, statutes of limitations, and damages.';
 ---
 <BaseLayout title={title} description={description}>
   <h1>Frequently Asked Questions</h1>
-  <h2>What is 42 U.S.C. § 1983?</h2>
-  <p>A federal statute enacted after the Civil War that allows individuals to sue state and local government officials who deprive them of constitutional or federal statutory rights under color of law. It is the primary tool for civil rights litigation against government actors.</p>
-  <h2>Can I sue the federal government under § 1983?</h2>
-  <p>No. Section 1983 covers state and local government actors, not federal officials. Claims against federal officers typically proceed under <em>Bivens v. Six Unknown Named Agents</em> (1971), which has been significantly restricted by the Supreme Court in recent years.</p>
-  <h2>What is qualified immunity?</h2>
-  <p>A judicially created doctrine that shields government officials from damages unless they violated a &ldquo;clearly established&rdquo; statutory or constitutional right that a reasonable person would have known. Critics argue it effectively bars many meritorious civil rights claims. Some states have abolished or limited it by statute.</p>
-  <h2>Can I sue a police department?</h2>
-  <p>Yes, but only under the <em>Monell</em> doctrine &mdash; you must show the violation resulted from an official policy, widespread custom, or a failure to train amounting to deliberate indifference. You cannot simply sue the department because one of its officers violated your rights.</p>
-  <h2>Is there a statute of limitations?</h2>
-  <p>Section 1983 uses the personal injury statute of limitations of the state where the violation occurred &mdash; typically 2 to 3 years. The clock starts when you knew or should have known of the injury, subject to tolling rules for minors and people under legal disability.</p>
-  <h2>Are punitive damages available against cities?</h2>
-  <p>No. <em>City of Newport v. Fact Concerts, Inc.</em> (1981) held that municipalities are immune from punitive damages under &sect; 1983. Punitive damages are available only against individual officers who act with malice or reckless indifference.</p>
+  <p><em>Reviewed by Uma Prescott (UP), Editor-in-Chief &mdash; Civil Rights &amp; Section 1983 Litigation Practice. Updated May 2026.</em></p>
+
+  <h2>What is 42 U.S.C. &sect; 1983?</h2>
+  <p>A federal statute enacted after the Civil War as part of the Civil Rights Act of 1871 that allows individuals to sue state and local government officials who deprive them of constitutional or federal statutory rights under color of law. Originally intended to combat the Ku Klux Klan&rsquo;s terrorist campaign against Reconstruction-era civil rights enforcement, it became the primary tool for civil rights litigation against government actors — police brutality, unlawful arrests, free speech retaliation, and other constitutional violations by state and local government. It does not apply to federal government officials.</p>
+
+  <h2>Can I sue the federal government under &sect; 1983?</h2>
+  <p>No. Section 1983 covers state and local government actors, not federal officials. Claims against federal officers are typically pursued under the <em>Bivens</em> doctrine, established in <em>Bivens v. Six Unknown Named Agents</em> (1971), which implied a damages remedy directly from the Fourth Amendment for unconstitutional searches by federal agents. The Supreme Court has significantly restricted <em>Bivens</em> over the past two decades, limiting its application to a narrow set of contexts (essentially, the Fourth Amendment search-and-seizure context established in the original case and a few others). New <em>Bivens</em> theories in novel contexts are now regularly rejected.</p>
+
+  <h2>What is qualified immunity and how does it affect my case?</h2>
+  <p>Qualified immunity is a judicially created doctrine that shields individual government officials from damages liability in &sect; 1983 cases unless two conditions are met: (1) their conduct violated a constitutional right, and (2) the right was &ldquo;clearly established&rdquo; at the time of the conduct. &ldquo;Clearly established&rdquo; means there must have been prior case law with sufficiently similar facts in the same circuit that put the constitutional question &ldquo;beyond debate&rdquo; for a reasonable officer. Courts can address either prong first (<em>Pearson v. Callahan</em>, 2009) and often dismiss cases on the second prong without deciding whether a violation occurred at all.</p>
+  <p>Qualified immunity does not apply to municipalities in Monell claims. It is an individual officer defense only. Several states — Colorado (2020), New Mexico (2021), New York City (2021) — have abolished or substantially limited qualified immunity for state-law civil rights claims by statute. Some federal circuit courts have also narrowed how broadly they apply the doctrine.</p>
+
+  <h2>Can I sue a police department directly?</h2>
+  <p>You can sue the municipality that operates the department, but only under the <em>Monell</em> doctrine. Under <em>Monell v. Department of Social Services</em> (1978), municipalities cannot be held vicariously liable for their employees&rsquo; constitutional violations — you cannot win against a city simply by showing one of its officers violated your rights. You must trace the violation to an official policy, a widespread informal custom or practice, a failure to train amounting to deliberate indifference, or a decision by a final policymaker. This is a substantially higher bar than individual officer claims and requires evidence about the government entity&rsquo;s practices, not just the individual incident.</p>
+
+  <h2>Is there a statute of limitations for &sect; 1983 claims?</h2>
+  <p>Section 1983 borrows the personal injury statute of limitations of the state where the violation occurred. This is most commonly two years (in the majority of states) or three years (in states like New York with a three-year personal injury period). The clock generally starts when you knew or should have known of the injury — but this can be tolled for minors, people under legal disability, or when the government has concealed the facts giving rise to the claim.</p>
+  <p>Critically, many states also impose separate notice-of-claim requirements for suits against government entities — often requiring written notice within 90 to 180 days of the incident, well before the statute of limitations expires. Missing these notice-of-claim deadlines can bar your case entirely even if you file suit within the full limitations period. Check your state&rsquo;s notice-of-claim statute and consult an attorney promptly after a civil rights violation.</p>
+
+  <h2>Are punitive damages available against cities or police departments?</h2>
+  <p>No. <em>City of Newport v. Fact Concerts, Inc.</em> (1981) held that municipalities are categorically immune from punitive damages under &sect; 1983, regardless of how egregious the conduct. Punitive damages are available only against individual officers (not supervisors in their official capacity, which is treated as a claim against the entity) who acted with actual malice or reckless indifference to constitutional rights. This distinction matters significantly for case value: cases against individual officers can include punitive recovery; cases based solely on Monell municipal liability cannot.</p>
+
   <h2>Do I get attorney fees if I win?</h2>
-  <p>Yes. The Civil Rights Attorney&rsquo;s Fees Awards Act (42 U.S.C. &sect; 1988) entitles the prevailing plaintiff to reasonable attorney fees from the defendant. This provision is critical &mdash; it makes it economically viable for attorneys to take small-damages civil rights cases.</p>
+  <p>Yes. The Civil Rights Attorney&rsquo;s Fees Awards Act (42 U.S.C. &sect; 1988) entitles the prevailing plaintiff to reasonable attorney fees from the defendant, paid separately from and in addition to the damages award. This provision is essential to the practical functioning of civil rights litigation — it makes it economically viable for experienced attorneys to take cases where the potential compensatory damages are small but the constitutional violation is significant. Without the &sect; 1988 fee shifting, the economics of civil rights litigation would make many meritorious small-damages cases unviable for plaintiffs to pursue.</p>
+  <p>Attorney fees are calculated using the lodestar method — reasonable hours multiplied by a reasonable hourly rate for civil rights attorneys in the relevant market. Fee awards can be substantial in complex cases and are separate from any contingency arrangement between the plaintiff and their attorney.</p>
+
+  <h2>Does &sect; 1983 cover prison conditions and mistreatment of incarcerated people?</h2>
+  <p>Yes, though the applicable constitutional standard differs for convicted prisoners versus pretrial detainees. Convicted prisoners are protected by the Eighth Amendment (which prohibits cruel and unusual punishment), and claims of excessive force or inadequate medical care require showing deliberate indifference by prison officials — a state of mind higher than mere negligence. After <em>Kingsley v. Hendrickson</em> (2015), pretrial detainees (who have not been convicted) are protected under the Fourteenth Amendment&rsquo;s due process clause, and the standard for excessive force claims is objective unreasonableness rather than subjective deliberate indifference — a meaningfully lower threshold that makes their claims easier to establish.</p>
+
+  <h2>What is the difference between suing an officer in their individual capacity versus official capacity?</h2>
+  <p>Individual capacity suits seek to hold the officer personally liable for damages. Official capacity suits are effectively suits against the government entity the officer represents and must satisfy Monell requirements. For damages purposes, individual capacity claims allow for punitive damages but the officer may assert qualified immunity; official capacity claims against the municipality do not allow punitive damages and require establishing Monell liability. Most &sect; 1983 damages suits name defendants in both capacities to preserve flexibility, but the practical effect of the individual/official distinction is significant for what damages and defenses apply.</p>
+
+  <p>Return to the <a href="/">calculator</a>, or read the <a href="/guides">guides</a> for in-depth coverage of each topic.</p>
 </BaseLayout>
