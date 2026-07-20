@@ -1,5 +1,6 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import LeadCapture from '../components/LeadCapture.astro';
 const title = 'Civil Rights Violation Damages Calculator (§ 1983) | civilrightscalc.com';
 const description = 'Estimate potential damages for civil rights violations under 42 U.S.C. § 1983: compensatory, punitive, and attorney fees. Free, informational.';
 ---
@@ -37,7 +38,10 @@ const description = 'Estimate potential damages for civil rights violations unde
     </select>
     <button type="submit">Estimate damages</button>
   </form>
-  <p id="result" aria-live="polite"></p>
+  
+
+  <LeadCapture caseType="civil_rights" caseTypeLabel="Civil Rights" />
+<p id="result" aria-live="polite"></p>
 
   <h2>Understanding your estimate</h2>
   <p>The calculator produces an estimated range, not a guaranteed outcome. Civil rights litigation under &sect; 1983 involves legal doctrines — particularly qualified immunity and the Monell requirements for municipal liability — that can dramatically affect whether any damages are recovered at all. A serious physical injury case against a municipality with a documented pattern-or-practice of unconstitutional conduct may produce a multi-million dollar verdict. The same injury involving a single officer where no prior analogous case clearly established the right could be dismissed on qualified immunity grounds before a jury ever hears it.</p>
@@ -54,7 +58,7 @@ const description = 'Estimate potential damages for civil rights violations unde
   <p>The practical significance: Monell claims are harder to win but, when successful, are often more valuable than individual officer claims because the government entity has greater capacity to satisfy a judgment and the case does not hinge on whether a single officer can be found to be personally liable.</p>
 
   <h2>Where to learn more</h2>
-  <p>See <a href="/guides/how-section-1983-works">how section 1983 works</a>, <a href="/guides/types-of-civil-rights-violations">types of civil rights violations</a>, <a href="/guides/what-to-do-after-civil-rights-violation">what to do after a civil rights violation</a>, and <a href="/guides/common-civil-rights-misconceptions">common civil rights claim misconceptions</a>. Read the <a href="/faq">FAQ</a> for answers to common questions about qualified immunity, the statute of limitations, and punitive damages against cities. For the formulas behind this calculator, see the <a href="/methodology">methodology</a> page.</p>
+  <p>See <a href="/guides/how-section-1983-works/">how section 1983 works</a>, <a href="/guides/types-of-civil-rights-violations/">types of civil rights violations</a>, <a href="/guides/what-to-do-after-civil-rights-violation/">what to do after a civil rights violation</a>, and <a href="/guides/common-civil-rights-misconceptions/">common civil rights claim misconceptions</a>. Read the <a href="/faq/">FAQ</a> for answers to common questions about qualified immunity, the statute of limitations, and punitive damages against cities. For the formulas behind this calculator, see the <a href="/methodology/">methodology</a> page.</p>
 
   <script>
     document.getElementById('calc').addEventListener('submit', e => {
